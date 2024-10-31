@@ -1,11 +1,11 @@
 import React from "react";
-import "../styles/components/Screen.module.css";
+import styles from "../styles/components/Screen.module.css";
 
-function Screen() {
+function Screen({input}) {
     return (
-        <div className="screenContainer">
-            <input type="text" name="" id="" />
-            <input type="text" />
+        <div className={styles.screenContainer}>
+            <input className={styles.firstInput}/>
+            <input className={styles.secondInput} value={input}/>
         </div>
     )
 }
