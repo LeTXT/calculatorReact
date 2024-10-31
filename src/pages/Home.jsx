@@ -5,13 +5,13 @@ import Screen from "../components/Screen";
 import Buttons from "../components/Buttons";
 
 function Home() {
-    const [input, setInput] = useState(1);
-    console.log(input);
+    const [inputState, setInputState] = useState("");
+    // console.log(inputState);
     
     return (
         <div className={styles.homeContainer}>
-            <Screen input={input}/>
-            <Buttons setInput={setInput}/>
+            <Screen inputState={inputState}/>
+            <Buttons setInputState={setInputState} inputState={inputState} />
         </div>
     )
 }
