@@ -1,4 +1,4 @@
-export const calc = (btn, setInputState, inputState) => {
+export const actionBtn = (btn, setInputState, inputState) => {
     
     let inputValue = inputState
     
@@ -14,5 +14,19 @@ export const calc = (btn, setInputState, inputState) => {
         const result = eval(inputValue)
         
         return setInputState(result)
+    }
+    if(btn === "DEL") {
+        console.log(inputValue);
+        try {
+            const delLast = String(inputValue).slice(0, -1)
+            setInputState(delLast)
+        } catch (error) {
+            console.error(error);
+            setInputState("Error")
+        }
+        
+    }
+    if(btn === "AC") {
+        setInputState("")
     }
 }

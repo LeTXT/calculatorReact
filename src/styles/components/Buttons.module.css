@@ -3,10 +3,39 @@
 
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+
+    margin:15px;
+    padding: 0;
 }
 
 button:last-of-type {
     grid-column: span 2;
 
     width: 150px;
+}
+button {
+    width: 64px;
+    height: 64px;
+
+    text-align: center;
+    cursor: pointer;
+
+    border: solid 3px #2D2C27;
+    border-radius: 11px;
+
+    background-color: #F9F5EC;
+
+    box-shadow: 4px 4px 0 0 #2D2C27;
+}
+button {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 24px;
+    color: #2D2C27;
+
+    transition: 0.2s;
+
+    -webkit-tap-highlight-color: transparent;
 }

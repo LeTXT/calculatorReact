@@ -10,8 +10,10 @@ function Home() {
     
     return (
         <div className={styles.homeContainer}>
-            <Screen inputState={inputState}/>
-            <Buttons setInputState={setInputState} inputState={inputState} />
+            <div className={styles.calculatorContainer}>
+                <Screen inputState={inputState}/>
+                <Buttons setInputState={setInputState} inputState={inputState} />
+            </div>
         </div>
     )
 }
