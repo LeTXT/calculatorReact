@@ -34,3 +34,8 @@
 
     cursor: default;
 }
+input:first-child {
+    font-size: 36px;
+
+    opacity: .5;
+}

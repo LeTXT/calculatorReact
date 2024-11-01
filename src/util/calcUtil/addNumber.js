@@ -1,12 +1,12 @@
-export const addNumber = (btn, inputValue, setInputState, calculatedObj) => {
-    console.log(calculatedObj.value);
+export const addNumber = (btn, inputValue, setInputState, setInputTop, bool, setBool) => {
     
-    if(!calculatedObj.value) {
+    if(!bool) {
         return setInputState((prevInput) => String(prevInput) + btn)
     } 
-    if(calculatedObj.value) {
+    if(bool) {
         // secundInput.value = input.value
-        calculatedObj.value = false
+        setInputTop(inputValue)
+        setBool(false)
         return setInputState(btn)
     }
 

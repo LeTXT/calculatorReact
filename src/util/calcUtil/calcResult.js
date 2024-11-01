@@ -1,4 +1,4 @@
-export const calcResult = (inputValue, setInputState, calculatedObj) => {
+export const calcResult = (inputValue, setInputState, setBool, setInputTop) => {
     try {
         // caso seja uma conta de porcentagem
         if(/\%/.test(inputValue)) {
@@ -24,9 +24,9 @@ export const calcResult = (inputValue, setInputState, calculatedObj) => {
                 return setInputState(result.toFixed(1))
             }
             
-            calculatedObj.value = true
-            console.log(calculatedObj.value);
-            
+            setBool(true)
+            setInputTop(inputValue)
+
             return setInputState(result)
             
         

@@ -1,21 +1,21 @@
 import {calcResult} from "./calcResult"
 import { addNumber } from "./addNumber"
+import { addSymbol } from "./addSymbol"
 
-export const actionBtn = (btn, setInputState, inputState) => {
+export const captureButtonPress = (btn, setInputState, setInputTop, inputState, bool, setBool) => {
     
     let inputValue = inputState
-    let calculatedObj = {value: false}
     
     // Caso btn ser número
     if(/^\d+(\.\d+)?$/.test(btn)) { 
-        addNumber(btn, inputValue, setInputState, calculatedObj)
+        addNumber(btn, inputValue, setInputState, setInputTop, bool, setBool)
     } 
     // Caso btn for symbol
     if(/^[^\w\s]+$/.test(btn)) { // Symbol
-        return setInputState((prevInput) => String(prevInput) + btn)
+        addSymbol(btn, setInputState, inputValue, setBool)
     }
     if(btn === "RESULT" && /\d/.test(inputValue) && /[^\w\s]/.test(inputValue)) {
-        calcResult(inputValue, setInputState, calculatedObj)
+        calcResult(inputValue, setInputState, setBool, setInputTop)
     }
     if(btn === "DEL") {
         console.log(inputValue);
