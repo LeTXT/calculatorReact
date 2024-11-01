@@ -38,4 +38,11 @@ button {
     transition: 0.2s;
 
     -webkit-tap-highlight-color: transparent;
+
+    transition: 0.2s;
+}
+button:active {
+    box-shadow: 0 0 0 0 #2D2C27;
+
+    transition: 0.2s
 }
